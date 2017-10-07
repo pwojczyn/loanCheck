@@ -6,7 +6,7 @@
     <meta name="description" content=""/>
     <meta name="author" content=""/>
 
-    <title th:text="#{loginPage.mainMeesage}"></title>
+    <title th:text="#{mainPage.mainMessage}"></title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"/>
@@ -16,7 +16,7 @@
 <body>
 
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="#"><span th:text="#{loginPage.mainMeesage}"></span></a>
+    <a class="navbar-brand" href="#"><span th:text="#{mainPage.mainMessage}"></span></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -32,19 +32,15 @@
 <div class="container">
 
     <div class="starter-template">
-        <h1><span th:text="#{loginPage.mainMeesage}"></span></h1>
-        <center><span th:text="${info}" style="color: red"></span></center>
+        <h1><span th:text="#{mainPage.mainMessage}"></span></h1>
+        <h2><span th:text="#{mainPage.welcomeText}"></span></h2>
+        <center><span th:text="${info}"></span></center>
 
 
     </div>
 
     <div class="starter-template">
-        <form th:action="@{/login}" method="post" th:object="${loginForm}">
-            <span th:text="#{loginPage.loginText}"></span> <input type="text" th:field="*{login}" th:name="login"/><p></p>
-            <span th:text="#{loginPage.nickText}"></span> <input type="text" th:field="*{nick}" th:name="nick"/><p></p>
-            <span th:text="#{loginPage.passwordText}"></span> <input type="password" th:field="*{password}" th:name="password"/><p></p>
-            <input type="submit" th:value="#{loginPage.buttonText}" value="Wyslij"/>
-        </form>
+
     </div>
 
 </div><!-- /.container -->

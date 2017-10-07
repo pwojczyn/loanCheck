@@ -1,8 +1,18 @@
 package com.pwojczyn.loanCheck.models.forms;
 
+import org.hibernate.validator.constraints.NotBlank;
+
+import javax.validation.constraints.Size;
+
 public class LoginForm {
+    @NotBlank
+    @Size(min = 3, max = 30)
     private String login;
+    @NotBlank
+    @Size(min = 3, max = 30)
     private String password;
+    @NotBlank
+    @Size(min = 3, max = 30)
     private String nick;
 
     public LoginForm(String login, String password, String nick) {
